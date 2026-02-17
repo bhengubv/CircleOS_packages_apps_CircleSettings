@@ -1,0 +1,32 @@
+// CircleSettings — Circle OS Privacy Management App
+// Build rule for the privileged system APK.
+
+android_app {
+    name: "CircleSettings",
+
+    srcs: ["src/**/*.java"],
+
+    resource_dirs: ["res"],
+
+    manifest: "AndroidManifest.xml",
+
+    // Runs as a privileged system app — can hold signature|privileged permissions
+    privileged: true,
+    platform_apis: true,
+
+    // Link against the Circle OS AIDL-generated stubs and framework
+    static_libs: [
+        "android.circleos-java",
+    ],
+
+    libs: [
+        "framework",
+        "framework-res",
+    ],
+
+    certificate: "platform",
+
+    optimize: {
+        enabled: false,
+    },
+}

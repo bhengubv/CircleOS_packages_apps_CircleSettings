@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    CircleSettings — Circle OS Privacy Management App
+    Package: com.circleos.settings
+    Installed as a privileged system app (priv-app).
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.circleos.settings"
+    android:versionCode="1"
+    android:versionName="0.1.0-alpha">
+
+    <uses-sdk android:minSdkVersion="34" android:targetSdkVersion="34" />
+
+    <!-- Required to call ICirclePrivacyManager and ICirclePermissionService -->
+    <uses-permission android:name="com.circleos.permission.MANAGE_PRIVACY" />
+    <!-- Required to schedule auto-revoke and threat intel jobs -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Required for VPN domain filter service -->
+    <uses-permission android:name="android.permission.BIND_VPN_SERVICE" />
+    <!-- Required for JobScheduler persistence -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:label="Circle Privacy"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.CircleSettings"
+        android:supportsRtl="true"
+        android:privileged="true">
+
+        <!-- ============================================================ -->
+        <!-- Activities                                                    -->
+        <!-- ============================================================ -->
+
+        <!-- Main launcher entry point — Privacy Dashboard -->
+        <activity
+            android:name=".privacy.PrivacyDashboardActivity"
+            android:label="Circle Privacy"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Per-app privacy detail screen -->
+        <activity
+            android:name=".privacy.AppPrivacyDetailActivity"
+            android:label="App Privacy"
+            android:exported="false" />
+
+        <!-- First-boot setup wizard -->
+        <activity
+            android:name=".SetupWizardActivity"
+            android:label="Circle OS Setup"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.circleos.action.SETUP_WIZARD" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Permission grant dialog (Action.ASK) -->
+        <activity
+            android:name=".CirclePermissionDialog"
+            android:label="Permission Request"
+            android:theme="@style/Theme.CircleSettings.Dialog"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.circleos.action.PERMISSION_DIALOG" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- ============================================================ -->
+        <!-- Services                                                      -->
+        <!-- ============================================================ -->
+
+        <!-- Auto-revoke job (7-day schedule) -->
+        <service
+            android:name=".AutoRevokeJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true" />
+
+        <!-- Threat intelligence updater (24-hour schedule, Wi-Fi only) -->
+        <service
+            android:name=".ThreatIntelUpdater"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true" />
+
+        <!-- VPN domain filter service -->
+        <service
+            android:name="com.circleos.server.vpn.CircleDomainFilterService"
+            android:permission="android.permission.BIND_VPN_SERVICE"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
+
+        <!-- ============================================================ -->
+        <!-- Receivers                                                     -->
+        <!-- ============================================================ -->
+
+        <!-- Trigger setup wizard and schedule jobs on first boot -->
+        <receiver
+            android:name=".BootReceiver"
+            android:exported="true">
+            <intent-filter android:priority="900">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>

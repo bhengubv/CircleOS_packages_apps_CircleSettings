@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Circle OS brand colours -->
+    <color name="circle_primary">#1A1A2E</color>       <!-- deep navy -->
+    <color name="circle_primary_dark">#0F0F1A</color>
+    <color name="circle_accent">#00D4FF</color>         <!-- electric cyan -->
+    <color name="circle_accent_dark">#0099BB</color>
+
+    <!-- Score colours -->
+    <color name="score_good">#4CAF50</color>            <!-- green  ≥80 -->
+    <color name="score_warn">#FFC107</color>            <!-- amber  50-79 -->
+    <color name="score_bad">#F44336</color>             <!-- red    <50 -->
+
+    <!-- Status colours -->
+    <color name="status_allowed">#4CAF50</color>
+    <color name="status_blocked">#F44336</color>
+    <color name="status_faked">#FF9800</color>
+
+    <!-- Surface/background -->
+    <color name="surface">#1E1E30</color>
+    <color name="surface_variant">#2A2A40</color>
+    <color name="on_surface">#E0E0E0</color>
+    <color name="on_surface_secondary">#9E9E9E</color>
+</resources>

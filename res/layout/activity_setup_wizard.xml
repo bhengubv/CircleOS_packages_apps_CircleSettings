@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/circle_primary">
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Screen 0: Welcome -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical" android:gravity="center" android:padding="40dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/wizard_welcome_title" android:textSize="28sp"
+                android:textStyle="bold" android:textColor="@color/circle_accent" android:gravity="center"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/wizard_welcome_body" android:textSize="16sp"
+                android:textColor="@color/on_surface" android:gravity="center"
+                android:layout_marginTop="24dp" android:lineSpacingMultiplier="1.4"/>
+        </LinearLayout>
+
+        <!-- Screen 1: Philosophy -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical" android:gravity="center" android:padding="40dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/wizard_philosophy_title" android:textSize="24sp"
+                android:textStyle="bold" android:textColor="@color/circle_accent" android:gravity="center"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/wizard_philosophy_body" android:textSize="16sp"
+                android:textColor="@color/on_surface" android:gravity="center"
+                android:layout_marginTop="24dp" android:lineSpacingMultiplier="1.4"/>
+        </LinearLayout>
+
+        <!-- Screen 2: Network -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical" android:gravity="center" android:padding="40dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/wizard_network_title" android:textSize="24sp"
+                android:textStyle="bold" android:textColor="@color/circle_accent" android:gravity="center"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/wizard_network_body" android:textSize="16sp"
+                android:textColor="@color/on_surface" android:gravity="center"
+                android:layout_marginTop="24dp" android:lineSpacingMultiplier="1.4"/>
+        </LinearLayout>
+
+        <!-- Screen 3: Sensors -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical" android:gravity="center" android:padding="40dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/wizard_sensor_title" android:textSize="24sp"
+                android:textStyle="bold" android:textColor="@color/circle_accent" android:gravity="center"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/wizard_sensor_body" android:textSize="16sp"
+                android:textColor="@color/on_surface" android:gravity="center"
+                android:layout_marginTop="24dp" android:lineSpacingMultiplier="1.4"/>
+        </LinearLayout>
+
+        <!-- Screen 4: Done -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical" android:gravity="center" android:padding="40dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/wizard_done_title" android:textSize="24sp"
+                android:textStyle="bold" android:textColor="@color/circle_accent" android:gravity="center"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/wizard_done_body" android:textSize="16sp"
+                android:textColor="@color/on_surface" android:gravity="center"
+                android:layout_marginTop="24dp" android:lineSpacingMultiplier="1.4"/>
+        </LinearLayout>
+
+    </ViewFlipper>
+
+    <!-- Navigation buttons -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="24dp">
+        <Button android:id="@+id/btn_back" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="@string/wizard_back" android:visibility="gone"
+            android:backgroundTint="@color/surface_variant"
+            android:textColor="@color/on_surface" android:layout_marginEnd="8dp"/>
+        <Button android:id="@+id/btn_next" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="@string/wizard_next"
+            android:backgroundTint="@color/circle_accent"
+            android:textColor="@color/circle_primary"/>
+    </LinearLayout>
+
+</LinearLayout>

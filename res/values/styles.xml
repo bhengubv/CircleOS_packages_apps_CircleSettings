@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CircleSettings" parent="android:Theme.Material.NoTitleBar">
+        <item name="android:colorPrimary">@color/circle_primary</item>
+        <item name="android:colorPrimaryDark">@color/circle_primary_dark</item>
+        <item name="android:colorAccent">@color/circle_accent</item>
+        <item name="android:windowBackground">@color/circle_primary</item>
+        <item name="android:textColorPrimary">@color/on_surface</item>
+        <item name="android:textColorSecondary">@color/on_surface_secondary</item>
+    </style>
+
+    <style name="Theme.CircleSettings.Dialog" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:colorPrimary">@color/circle_primary</item>
+        <item name="android:colorAccent">@color/circle_accent</item>
+    </style>
+
+    <style name="ScoreBadge">
+        <item name="android:padding">4dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/surface_variant</item>
+    </style>
+</resources>

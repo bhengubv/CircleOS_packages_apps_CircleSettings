@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/circle_primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Network -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/detail_network" android:textColor="@color/circle_accent"
+            android:textSize="13sp" android:layout_marginTop="16dp" />
+        <Switch android:id="@+id/switch_network" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textColor="@color/on_surface"
+            android:text="Allow internet access" />
+
+        <!-- Contacts -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/detail_contacts" android:textColor="@color/circle_accent"
+            android:textSize="13sp" android:layout_marginTop="16dp" />
+        <Switch android:id="@+id/switch_contacts" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textColor="@color/on_surface"
+            android:text="Allow contacts access" />
+
+        <!-- Storage -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/detail_storage" android:textColor="@color/circle_accent"
+            android:textSize="13sp" android:layout_marginTop="16dp" />
+        <Switch android:id="@+id/switch_storage" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textColor="@color/on_surface"
+            android:text="Allow storage access" />
+
+        <!-- Lobby mode -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/detail_lobby" android:textColor="@color/circle_accent"
+            android:textSize="13sp" android:layout_marginTop="16dp" />
+        <Switch android:id="@+id/switch_lobby" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textColor="@color/on_surface"
+            android:text="Lobby mode (Circle servers only)" />
+
+        <!-- Sensors -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/detail_sensors" android:textColor="@color/circle_accent"
+            android:textSize="13sp" android:layout_marginTop="16dp" />
+        <Switch android:id="@+id/switch_accelerometer" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textColor="@color/on_surface"
+            android:text="@string/detail_accelerometer" />
+        <Switch android:id="@+id/switch_gyroscope" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textColor="@color/on_surface"
+            android:text="@string/detail_gyroscope" />
+        <Switch android:id="@+id/switch_barometer" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textColor="@color/on_surface"
+            android:text="@string/detail_barometer" />
+        <Switch android:id="@+id/switch_magnetometer" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textColor="@color/on_surface"
+            android:text="@string/detail_magnetometer" />
+
+        <!-- Audit log -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/detail_audit_log" android:textColor="@color/circle_accent"
+            android:textSize="13sp" android:layout_marginTop="24dp" />
+        <TextView android:id="@+id/audit_log" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textColor="@color/on_surface_secondary"
+            android:textSize="12sp" android:fontFamily="monospace"
+            android:layout_marginTop="4dp" android:padding="8dp"
+            android:background="@color/surface_variant" />
+
+    </LinearLayout>
+</ScrollView>

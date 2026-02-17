@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/surface">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <ImageView android:id="@+id/app_icon" android:layout_width="48dp"
+            android:layout_height="48dp" android:scaleType="fitCenter" />
+
+        <TextView android:id="@+id/dialog_title" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:textSize="16sp" android:textStyle="bold"
+            android:textColor="@color/on_surface" android:layout_marginStart="12dp" />
+    </LinearLayout>
+
+    <TextView android:id="@+id/dialog_description" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:textSize="14sp"
+        android:textColor="@color/on_surface_secondary" android:layout_marginBottom="16dp" />
+
+    <CheckBox android:id="@+id/remember_choice" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/perm_dialog_remember"
+        android:textColor="@color/on_surface_secondary" android:layout_marginBottom="24dp" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btn_deny" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="@string/perm_dialog_deny"
+            android:backgroundTint="@color/surface_variant"
+            android:textColor="@color/on_surface" android:layout_marginEnd="8dp"/>
+        <Button android:id="@+id/btn_allow" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="@string/perm_dialog_allow"
+            android:backgroundTint="@color/circle_accent"
+            android:textColor="@color/circle_primary"/>
+    </LinearLayout>
+
+</LinearLayout>

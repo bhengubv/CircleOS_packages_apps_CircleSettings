@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Circle Privacy</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">Privacy Dashboard</string>
+    <string name="dashboard_score_label">Device Privacy Score</string>
+    <string name="dashboard_score_format">%d/100</string>
+
+    <!-- App detail -->
+    <string name="detail_network">Internet Access</string>
+    <string name="detail_contacts">Contacts Access</string>
+    <string name="detail_storage">Storage Access</string>
+    <string name="detail_lobby">Lobby Mode</string>
+    <string name="detail_sensors">Sensors</string>
+    <string name="detail_accelerometer">Accelerometer</string>
+    <string name="detail_gyroscope">Gyroscope</string>
+    <string name="detail_barometer">Barometer</string>
+    <string name="detail_magnetometer">Magnetometer</string>
+    <string name="detail_audit_log">Recent Activity (7 days)</string>
+    <string name="detail_no_activity">No recent activity</string>
+
+    <!-- Permission dialog -->
+    <string name="perm_dialog_allow">Allow</string>
+    <string name="perm_dialog_deny">Deny</string>
+    <string name="perm_dialog_remember">Remember this choice</string>
+
+    <!-- Setup wizard -->
+    <string name="wizard_welcome_title">Welcome to Circle OS</string>
+    <string name="wizard_welcome_body">The privacy-first operating system. Every app starts with zero permissions. You decide what each app can access.</string>
+    <string name="wizard_philosophy_title">Privacy by Default</string>
+    <string name="wizard_philosophy_body">Circle OS blocks all internet access, sensors, and data by default. Apps must earn your trust — not the other way around.</string>
+    <string name="wizard_network_title">Network Control</string>
+    <string name="wizard_network_body">No app can reach the internet without your explicit permission. You can grant access per-app, or limit it to specific websites.</string>
+    <string name="wizard_sensor_title">Sensor Control</string>
+    <string name="wizard_sensor_body">Accelerometer, gyroscope, barometer, and magnetometer access is blocked by default. Grant access only to apps that need it.</string>
+    <string name="wizard_done_title">You\'re protected</string>
+    <string name="wizard_done_body">Circle OS is ready. Open Privacy Dashboard anytime to manage your app permissions.</string>
+    <string name="wizard_next">Next</string>
+    <string name="wizard_back">Back</string>
+    <string name="wizard_finish">Finish</string>
+
+    <!-- Network monitor -->
+    <string name="monitor_title">Network Monitor</string>
+    <string name="monitor_notification_title">Circle OS Network Monitor</string>
+    <string name="monitor_notification_text">%d connections monitored</string>
+    <string name="monitor_allowed">ALLOWED</string>
+    <string name="monitor_blocked">BLOCKED</string>
+
+    <!-- OTA -->
+    <string name="ota_check">Check for Updates</string>
+    <string name="ota_up_to_date">Circle OS is up to date</string>
+    <string name="ota_available">Update available: %s</string>
+    <string name="ota_downloading">Downloading update…</string>
+    <string name="ota_installing">Installing update…</string>
+    <string name="ota_reboot">Reboot to apply update</string>
+</resources>

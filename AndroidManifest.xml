@@ -22,7 +22,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:label="Circle Privacy"
+        android:label="CircleOS Settings"
         android:icon="@mipmap/ic_launcher"
         android:theme="@style/Theme.CircleSettings"
         android:supportsRtl="true"
@@ -32,16 +32,34 @@
         <!-- Activities                                                    -->
         <!-- ============================================================ -->
 
-        <!-- Main launcher entry point — Privacy Dashboard -->
+        <!-- Main launcher entry point — Settings Hub -->
         <activity
-            android:name=".privacy.PrivacyDashboardActivity"
-            android:label="Circle Privacy"
+            android:name=".CircleSettingsActivity"
+            android:label="CircleOS Settings"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Privacy Dashboard (accessed from hub) -->
+        <activity
+            android:name=".privacy.PrivacyDashboardActivity"
+            android:label="Privacy"
+            android:exported="false" />
+
+        <!-- Mesh Network settings -->
+        <activity
+            android:name=".mesh.MeshSettingsActivity"
+            android:label="Mesh Network"
+            android:exported="false" />
+
+        <!-- System Update settings -->
+        <activity
+            android:name=".update.UpdateSettingsActivity"
+            android:label="System Update"
+            android:exported="false" />
 
         <!-- Per-app privacy detail screen -->
         <activity
